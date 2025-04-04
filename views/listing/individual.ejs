@@ -50,10 +50,10 @@
                         <%if( currentUser && currentUser._id.equals(data.owner._id) ){%>
 
                             <div class="row">
-                                <form class="col-2" action="http://localhost:8080/listings/<%=data._id%>/edit"> <button
+                                <form class="col-2" action="/listings/<%=data._id%>/edit"> <button
                                         class="add-btn">Edit</button></form>
                                 <form class="col-2" method="post"
-                                    action="http://localhost:8080/listings/<%=data._id%>/delete?_method=DELETE"> <button
+                                    action="/listings/<%=data._id%>/delete?_method=DELETE"> <button
                                         class="del-btn">Delete</button></form>
 
                             </div>
