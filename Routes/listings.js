@@ -26,7 +26,7 @@ const validatenewdata=(req,res,next)=>{
     }
 }
 
-
+router.get("/",wrapAsync(listingController.index))
 
 
 router.get("/newform",isLoggedin,listingController.renderAddform)

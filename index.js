@@ -117,9 +117,7 @@ app.listen(8080, () => {
     console.log("Listening on 8080");
 })
 
-app.get("/", (req, res) => {
-    res.send("Hello i Am the Root");
-})
+
 // for the Testing 
 // app.get("/testlisting",async (req,res)=>{
 
