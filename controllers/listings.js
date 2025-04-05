@@ -13,7 +13,7 @@ module.exports.index=async (req, res) => {
 }
 module.exports.renderAddform=(req, res) => {
 
-    res.render("./listing/newadd.ejs")
+    res.render("/listing/newadd.ejs")
 
 }
 module.exports.submitAddForm=async (req, res) => {
