@@ -104,6 +104,14 @@ module.exports.submitAddForm=async (req, res) => {
     module.exports.saveEditForm=async (req, res) => {
         let { id } = req.params
         let {newdata} = req.body//
+
+        let response=await geocodingClient.forwardGeocode({
+            query: newdata.location,
+            limit: 1
+          })
+            .send()
+            console.log(response.body.features[0].geometry)
+
         console.log(newdata)
         console.log("reached",req.file)
         let url1="ab"
@@ -128,7 +136,8 @@ module.exports.submitAddForm=async (req, res) => {
             location: newdata.location,
             image:{url:url1,
                 filename:filename1
-            }
+            },
+            geometry: response.body.features[0].geometry,
         })
         console.log("sucees")
         console.log("find",)

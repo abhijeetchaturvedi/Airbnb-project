@@ -20,7 +20,7 @@ router.route("/")
 )
 
 
-router.delete("/:reviewid", reviewAuthor,wrapAsync(reviewController.deleteReview))
+router.delete("/:reviewid",isLoggedin, reviewAuthor,wrapAsync(reviewController.deleteReview))
 
 
 module.exports=router

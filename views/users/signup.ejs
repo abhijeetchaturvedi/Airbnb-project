@@ -1,4 +1,4 @@
-<% layout('/layouts/boilerplate') -%>
+<!-- <% layout('/layouts/boilerplate') -%>
 <body>
     <div class="row mt-3">
         <h1 class="col-6 offset-3">Signup on WanderLust</h1>
@@ -17,3 +17,99 @@
             </form>
         </div>
     </div>
+
+
+
+
+     -->
+
+     <% layout('/layouts/boilerplate') -%>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #edf6f9, #d9f0ff);
+    }
+
+    .signup-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: 1rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .signup-box {
+        background-color: #ffffff;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        max-width: 460px;
+    }
+
+    .signup-title {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #2c3e50;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #34495e;
+    }
+
+    .form-control {
+        border-radius: 12px;
+        border: 1px solid #d0d7de;
+        padding: 0.75rem;
+        font-size: 0.95rem;
+        background-color: #ffffff;
+        transition: border 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #8ecae6;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .btn-signup {
+        background-color: #8ecae6;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 12px;
+        transition: background 0.3s ease;
+    }
+
+    .btn-signup:hover {
+        background-color: #219ebc;
+    }
+</style>
+
+<div class="signup-wrapper">
+    <div class="signup-box">
+        <h1 class="signup-title">Signup on Rentify</h1>
+        <form method="POST" action="/signup" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn-signup mt-3">Sign up</button>
+        </form>
+    </div>
+</div>

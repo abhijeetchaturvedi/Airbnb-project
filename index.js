@@ -4,7 +4,7 @@ if(process.env.NODE_ENV!="production"){
 }
 // console.log(process.env)
 const RentifyDB_URL = process.env.ATLAS_DB_URL
-
+// const RentifyDB_URL = "mongodb://127.0.0.1:27017/RentifyDB"
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -57,7 +57,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
-// const RentifyDB_URL = "mongodb://127.0.0.1:27017/RentifyDB"
+
 
 
 
